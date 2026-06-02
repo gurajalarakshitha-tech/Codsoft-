@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#ff6b35;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:2.5rem;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+.category{
+    margin-bottom:40px;
+}
+
+.category h2{
+    color:#ff6b35;
+    margin-bottom:20px;
+    border-bottom:3px solid #ff6b35;
+    display:inline-block;
+    padding-bottom:5px;
+}
+
+.menu-items{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#ff6b35;
+    font-weight:bold;
+    font-size:18px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Foodie's Restaurant</h1>
+    <p>Delicious Food, Delivered Fresh</p>
+</header>
+
+<div class="container">
+
+    <!-- Starters -->
+    <section class="category">
+        <h2>Starters</h2>
+
+        <div class="menu-items">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="">
+                <div class="card-content">
+                    <h3>Veg Spring Rolls</h3>
+                    <p>Crispy rolls stuffed with fresh vegetables.</p>
+                    <div class="price">₹149</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600" alt="">
+                <div class="card-content">
+                    <h3>Paneer Tikka</h3>
+                    <p>Grilled paneer cubes with spices.</p>
+                    <div class="price">₹199</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Main Course -->
+    <section class="category">
+        <h2>Main Course</h2>
+
+        <div class="menu-items">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600" alt="">
+                <div class="card-content">
+                    <h3>Butter Chicken</h3>
+                    <p>Creamy tomato gravy with tender chicken.</p>
+                    <div class="price">₹349</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600" alt="">
+                <div class="card-content">
+                    <h3>Veg Biryani</h3>
+                    <p>Fragrant basmati rice with vegetables.</p>
+                    <div class="price">₹249</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Desserts -->
+    <section class="category">
+        <h2>Desserts</h2>
+
+        <div class="menu-items">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600" alt="">
+                <div class="card-content">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich chocolate cake with creamy frosting.</p>
+                    <div class="price">₹179</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600" alt="">
+                <div class="card-content">
+                    <h3>Ice Cream Sundae</h3>
+                    <p>Vanilla ice cream topped with chocolate syrup.</p>
+                    <div class="price">₹129</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Drinks -->
+    <section class="category">
+        <h2>Drinks</h2>
+
+        <div class="menu-items">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600" alt="">
+                <div class="card-content">
+                    <h3>Mango Shake</h3>
+                    <p>Fresh mango blended with milk.</p>
+                    <div class="price">₹99</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" alt="">
+                <div class="card-content">
+                    <h3>Cold Coffee</h3>
+                    <p>Refreshing coffee served chilled.</p>
+                    <div class="price">₹119</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Foodie's Restaurant | Designed for CodSoft UI/UX Internship</p>
+</footer>
+
+</body>
+</html>

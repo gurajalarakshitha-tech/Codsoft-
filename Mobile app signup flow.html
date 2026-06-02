@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile App Signup Flow</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:350px;
+}
+
+.screen{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    display:none;
+}
+
+.screen.active{
+    display:block;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:10px;
+    color:#4F46E5;
+}
+
+p{
+    text-align:center;
+    color:#666;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#4F46E5;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#3730a3;
+}
+
+.otp{
+    display:flex;
+    gap:10px;
+}
+
+.otp input{
+    text-align:center;
+    font-size:20px;
+}
+
+.success{
+    text-align:center;
+    color:green;
+    font-size:50px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Welcome -->
+    <div class="screen active" id="screen1">
+        <h2>QuickConnect</h2>
+        <p>Join thousands of users and stay connected.</p>
+        <button onclick="nextScreen(2)">Sign Up</button>
+    </div>
+
+    <!-- Signup -->
+    <div class="screen" id="screen2">
+        <h2>Create Account</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="tel" placeholder="Phone Number">
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm Password">
+
+        <button onclick="nextScreen(3)">Create Account</button>
+    </div>
+
+    <!-- OTP -->
+    <div class="screen" id="screen3">
+        <h2>OTP Verification</h2>
+        <p>Enter verification code</p>
+
+        <div class="otp">
+            <input maxlength="1">
+            <input maxlength="1">
+            <input maxlength="1">
+            <input maxlength="1">
+        </div>
+
+        <button onclick="nextScreen(4)">Verify</button>
+    </div>
+
+    <!-- Profile Setup -->
+    <div class="screen" id="screen4">
+        <h2>Complete Profile</h2>
+
+        <input type="text" placeholder="Username">
+        <input type="text" placeholder="Location">
+
+        <input type="text" placeholder="Interests">
+
+        <button onclick="nextScreen(5)">Continue</button>
+    </div>
+
+    <!-- Success -->
+    <div class="screen" id="screen5">
+        <div class="success">✓</div>
+        <h2>Account Created</h2>
+        <p>Welcome to QuickConnect!</p>
+
+        <button onclick="alert('Welcome!')">Get Started</button>
+    </div>
+
+</div>
+
+<script>
+function nextScreen(id){
+    document.querySelectorAll('.screen').forEach(screen=>{
+        screen.classList.remove('active');
+    });
+
+    document.getElementById('screen'+id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
